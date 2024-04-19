@@ -53,5 +53,29 @@ public class SortArray{
         
         assertArrayEquals(expectedSortedArray, arrayWithDuplicates);
     }
+
+    @Test
+    public void testArrayWithAllEqualElements() {
+        int[] arrayWithAllEqualElements = {3, 3, 3, 3, 3};
+        int[] expectedSortedArray = {3, 3, 3, 3, 3};
+        
+        // Call the sorting function
+        SortArray.sort(arrayWithAllEqualElements);
+        
+        // Check if the array with all equal elements remains unchanged
+        assertArrayEquals(expectedSortedArray, arrayWithAllEqualElements);
+    }
+    
+    @Test
+    public void testArrayWithMixedNumbers() {
+        int[] mixedNumbersArray = {-1, 0, 5, -5, 3, -3, 7};
+        int[] expectedSortedArray = {-5, -3, -1, 0, 3, 5, 7};
+        
+        // Call the sorting function
+        SortArray.sort(mixedNumbersArray);
+        
+        // Check if the array with mixed numbers is sorted as expected
+        assertArrayEquals(expectedSortedArray, mixedNumbersArray);
+    }
 }
 
